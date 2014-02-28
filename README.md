@@ -30,3 +30,20 @@ define([link!my-web-component.html], function (wcElement) {
   console.log(wcElement); // HTMLLinkELement for the imported web-component
 });
 ```
+
+Configs:
+--------
+
+You can configure some options from the *requirejs-link* plugin.
+
+ - **ignoreBaseUrl**: ignore the requirejs base url configuration, will use the window.location.hostname as default.
+
+Example:
+
+```
+require.config({
+  link: {
+    ignoreBaseUrl: true
+  }
+});
+```
