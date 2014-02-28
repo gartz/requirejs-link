@@ -11,7 +11,8 @@ Easy to use:
 
 You just need to execute the plugin and add the full file path with extension.
 
-```define([link!mystyle.css], function (styleElement) {
+```
+define([link!mystyle.css], function (styleElement) {
   console.log(styleElement.parentElement); // document.head
     
   // Removing example:
@@ -19,10 +20,13 @@ You just need to execute the plugin and add the full file path with extension.
     
   // Addeding again to DOM:
   document.head.appendChild(styleElement);
-});```
+});
+```
 
 You also can use with HTMLImports, if the browser support, or if you are using Polymer-project or other shim.
 
-```define([link!my-web-component.html], function (wcElement) {
+```
+define([link!my-web-component.html], function (wcElement) {
   console.log(wcElement); // HTMLLinkELement for the imported web-component
-});```
+});
+```
