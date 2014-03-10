@@ -9,7 +9,7 @@
 define(function () {
     'use strict';
 
-    var global = window || root; 
+    var global = window || root;
 
     function setupLink(link, ext) {
         switch (ext) {
@@ -45,13 +45,13 @@ define(function () {
             }
 
             var link = document.createElement('link');
-            
+
             link = setupLink(link, getExtension(name));
 
             var path = '';
 
             var conf = config.link || {};
-            
+
             var file = name;
 
             // Ignore requirejs baseUrl
@@ -62,7 +62,11 @@ define(function () {
             link.href = path + name;
 
             link.addEventListener('load', function () {
-                load(this);
+                load(link);
+            });
+
+            link.addEventListener('error', function () {
+                throw new Error('Unable to load link resource using requirejs-link plugin');
             });
 
             document.head.appendChild(link);
