@@ -1,6 +1,8 @@
 requirejs-link
 ==============
 
+[![Analytics](https://ga-beacon.appspot.com/UA-24619548-7/requirejs-link/readme)](https://github.com/igrigorik/ga-beacon)
+
 RequireJS plugin to insert LINK element on DOM, work with CSS and HTMLImport
 
 It will return the reference from the created element, as default it append on the head, but you can remove
