@@ -9,7 +9,7 @@
 define(function () {
     'use strict';
 
-    var global = window || root;
+    var global = Function('return this')(); 
 
     function setupLink(link, ext) {
         switch (ext) {
@@ -51,8 +51,6 @@ define(function () {
             var path = '';
 
             var conf = config.link || {};
-
-            var file = name;
 
             // Ignore requirejs baseUrl
             if (!conf.ignoreBaseUrl) {
