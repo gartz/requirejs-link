@@ -57,7 +57,11 @@ define(function () {
                 path = global.location.pathname + config.baseUrl;
             }
 
-            link.href = path + name;
+            var url = path + name;
+            url = config.urlArgs ? url +
+                                        ((url.indexOf('?') === -1 ? '?' : '&') +
+                                         config.urlArgs) : url;
+            link.href = url;
 
             link.addEventListener('load', function () {
                 load(link);
