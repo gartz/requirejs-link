@@ -14,7 +14,7 @@ Easy to use:
 
 You just need to execute the plugin and add the full file path with extension.
 
-```
+```JavaScript
 define([link!mystyle.css], function (styleElement) {
   console.log(styleElement.parentElement); // document.head
     
@@ -28,7 +28,7 @@ define([link!mystyle.css], function (styleElement) {
 
 You also can use with HTMLImports, if the browser support, or if you are using Polymer-project or other shim.
 
-```
+```JavaScript
 define([link!my-web-component.html], function (wcElement) {
   console.log(wcElement); // HTMLLinkELement for the imported web-component
 });
@@ -43,7 +43,7 @@ You can configure some options from the *requirejs-link* plugin.
 
 Example:
 
-```
+```JavaScript
 require.config({
   link: {
     ignoreBaseUrl: true
