@@ -2,6 +2,7 @@ requirejs-link
 ==============
 
 [![Analytics](https://ga-beacon.appspot.com/UA-24619548-7/requirejs-link/readme)](https://github.com/igrigorik/ga-beacon)
+[![NPM version](https://badge.fury.io/js/requirejs-link.png)](http://badge.fury.io/js/requirejs-link)
 
 RequireJS plugin to insert LINK element on DOM, work with CSS and HTMLImport
 
