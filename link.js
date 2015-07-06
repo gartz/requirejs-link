@@ -9,7 +9,9 @@
 define(function () {
     'use strict';
 
-    var global = Function('return this')(); 
+    var root = (function(){ 
+        return typeof window === 'object' ? window : global;
+    }());
 
     function setupLink(link, ext) {
         switch (ext) {
@@ -54,7 +56,7 @@ define(function () {
 
             // Ignore requirejs baseUrl
             if (!conf.ignoreBaseUrl) {
-                path = global.location.pathname + config.baseUrl;
+                path = root.location.pathname + config.baseUrl;
             }
 
             var url = path + name;
