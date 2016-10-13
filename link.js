@@ -9,7 +9,7 @@
 define(function () {
     'use strict';
 
-    var root = (function(){ 
+    var root = (function(){
         return typeof window === 'object' ? window : global;
     }());
 
@@ -59,11 +59,12 @@ define(function () {
                 path = root.location.pathname + config.baseUrl;
             }
 
-            var url = path + name;
-            url = config.urlArgs ? url +
-                                        ((url.indexOf('?') === -1 ? '?' : '&') +
-                                         config.urlArgs) : url;
-            link.href = url;
+            var url = path + name,
+                urlArgs = config.urlArgs && (typeof config.urlArgs === 'function'
+                    ? config.urlArgs(name, url)
+                    : (url.indexOf('?') === -1 ? '?' : '&') + urlArgs);
+
+            link.href = url + urlArgs;
 
             link.addEventListener('load', function () {
                 load(link);
