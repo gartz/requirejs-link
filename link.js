@@ -62,7 +62,7 @@ define(function () {
             var url = path + name,
                 urlArgs = config.urlArgs && (typeof config.urlArgs === 'function'
                     ? config.urlArgs(name, url)
-                    : (url.indexOf('?') === -1 ? '?' : '&') + urlArgs);
+                    : (url.indexOf('?') === -1 ? '?' : '&') + config.urlArgs);
 
             link.href = url + urlArgs;
 
