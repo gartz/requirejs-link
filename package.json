@@ -1,6 +1,6 @@
 {
   "name": "requirejs-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RequireJS plugin to insert LINK element on DOM, work with CSS and HTMLImport",
   "main": "link.js",
   "scripts": {
