@@ -27,7 +27,7 @@ define(function () {
     }
 
     function getExtension(filename) {
-        var ext = filename.split('/').pop();
+        var ext = filename.split('/').pop().split('?').shift();
         return ext.indexOf('.') < 1 ? '' : ext.split('.').pop();
     }
 
